@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eaton County High School Democrats</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container">
+      <div class="branding">
+        <span class="logo">ECHSD</span>
+        <div class="title">
+          <h1>Eaton County High School Democrats</h1>
+          <p>Building the next generation of community leaders</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
+        <ul id="primary-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#board">E-Board</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="admin-trigger" id="adminTrigger" type="button">Admin</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>We organize. We uplift. We win.</h2>
+          <p>
+            The Eaton County High School Democrats are a coalition of young leaders
+            working to build a stronger, more inclusive Michigan. We advocate for
+            the issues that matter to students, empower new voices, and create
+            lasting change in our communities.
+          </p>
+          <a class="cta" href="#get-involved">Join the movement</a>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="stripes"></div>
+          <p class="card-quote">“Democracy is not a spectator sport. Pull up a chair.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container split">
+        <div>
+          <h2>Who we are</h2>
+          <p>
+            We are high school students from across Eaton County who believe
+            in the power of civic engagement. Our chapter is committed to
+            creating welcoming spaces for discussion, organizing, and action.
+          </p>
+          <p>
+            From voter registration drives to community service projects, we
+            collaborate with local partners and elected officials to champion
+            progressive values. Whether you're new to politics or already an
+            experienced organizer, there's room for you here.
+          </p>
+        </div>
+        <div>
+          <h2>What we do</h2>
+          <ul class="checklist">
+            <li>Host monthly meetings featuring local leaders and activists</li>
+            <li>Organize canvasses, phone banks, and voter registration events</li>
+            <li>Provide leadership development and mentorship opportunities</li>
+            <li>Support candidates who reflect our values and our community</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section events">
+      <div class="container">
+        <div class="section-header">
+          <h2>Upcoming Events</h2>
+          <p>Come learn, organize, and connect with fellow Democrats.</p>
+        </div>
+        <div id="eventsList" class="card-grid" role="list"></div>
+      </div>
+    </section>
+
+    <section id="board" class="section board">
+      <div class="container">
+        <div class="section-header">
+          <h2>Executive Board</h2>
+          <p>Meet the students guiding our chapter's vision and outreach.</p>
+        </div>
+        <div id="boardList" class="card-grid board-grid" role="list"></div>
+      </div>
+    </section>
+
+    <section id="get-involved" class="section get-involved">
+      <div class="container split">
+        <div>
+          <h2>Ready to lead?</h2>
+          <p>
+            We're always on the lookout for energetic students who are ready to
+            organize and advocate for change. Check out our current applications
+            and open leadership opportunities.
+          </p>
+          <div id="applicationList" class="application-list"></div>
+        </div>
+        <aside class="info-card">
+          <h3>Stay connected</h3>
+          <p>Follow us on social media for announcements and actions.</p>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container split">
+        <div>
+          <h2>Contact Us</h2>
+          <p>Email: <a href="mailto:info@eatoncountyhsdems.org">info@eatoncountyhsdems.org</a></p>
+          <p>Phone: (517) 555-2024</p>
+          <p>Mail: 123 Democracy Way, Lansing, MI 48933</p>
+        </div>
+        <div>
+          <h3>Chapter meetings</h3>
+          <p>
+            We meet on the first Wednesday of every month at the Eaton County
+            Democratic Headquarters. Guests are always welcome!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Eaton County High School Democrats. All rights reserved.</p>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog id="adminDialog" class="admin-dialog" aria-labelledby="adminDialogTitle">
+    <form id="adminLoginForm" class="admin-login" method="dialog">
+      <h2 id="adminDialogTitle">Admin Access</h2>
+      <p>Sign in to manage events, leadership, and applications.</p>
+      <label>
+        Email
+        <input type="email" id="adminEmail" required autocomplete="username" />
+      </label>
+      <label>
+        Passcode
+        <input type="password" id="adminPassword" required autocomplete="current-password" />
+      </label>
+      <div class="actions">
+        <button type="submit" class="primary">Sign In</button>
+        <button type="button" id="adminCancel">Cancel</button>
+      </div>
+      <p class="error-message" id="adminError" role="alert" aria-live="assertive"></p>
+    </form>
+  </dialog>
+
+  <section id="adminPanel" class="admin-panel" hidden>
+    <div class="container">
+      <div class="admin-panel__header">
+        <h2>Chapter Management</h2>
+        <button id="adminSignOut" class="outline">Sign out</button>
+      </div>
+      <div class="admin-grid">
+        <section>
+          <h3>Events</h3>
+          <form id="eventForm" class="admin-form">
+            <div class="form-row">
+              <label>Title<input type="text" id="eventTitle" required /></label>
+              <label>Date<input type="date" id="eventDate" required /></label>
+              <label>Time<input type="time" id="eventTime" required /></label>
+            </div>
+            <label>Location<input type="text" id="eventLocation" required /></label>
+            <label>Description<textarea id="eventDescription" rows="3" required></textarea></label>
+            <button type="submit" class="primary">Add Event</button>
+          </form>
+          <ul id="adminEventList" class="admin-list"></ul>
+        </section>
+        <section>
+          <h3>E-Board</h3>
+          <form id="boardForm" class="admin-form">
+            <div class="form-row">
+              <label>Name<input type="text" id="boardName" required /></label>
+              <label>Role<input type="text" id="boardRole" required /></label>
+            </div>
+            <label>Email<input type="email" id="boardEmail" placeholder="member@example.com" /></label>
+            <label>Photo URL<input type="url" id="boardPhoto" placeholder="https://..." /></label>
+            <label>Bio<textarea id="boardBio" rows="2" placeholder="Why this leader stands out"></textarea></label>
+            <label class="checkbox">
+              <input type="checkbox" id="boardVacant" /> Mark as vacant position
+            </label>
+            <button type="submit" class="primary">Add Board Entry</button>
+          </form>
+          <ul id="adminBoardList" class="admin-list"></ul>
+        </section>
+        <section>
+          <h3>Applications & Opportunities</h3>
+          <form id="applicationForm" class="admin-form">
+            <label>Title<input type="text" id="applicationTitle" required /></label>
+            <label>Description<textarea id="applicationDescription" rows="3" required></textarea></label>
+            <label>Link<input type="url" id="applicationLink" placeholder="https://" required /></label>
+            <button type="submit" class="primary">Add Opportunity</button>
+          </form>
+          <ul id="adminApplicationList" class="admin-list"></ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
